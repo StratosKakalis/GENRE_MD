@@ -9,7 +9,7 @@ import os
 from typing import List, Dict
 
 import torch
-from fairseq.fairseq.models.bart import BARTHubInterface, BARTModel
+from fairseq.fairseq.fairseq.models.bart import BARTHubInterface, BARTModel
 
 from genre.utils import post_process_wikidata
 
@@ -87,7 +87,7 @@ class GENRE(BARTModel):
         bpe="gpt2",
         **kwargs,
     ):
-        from fairseq import hub_utils
+        from fairseq.fairseq import hub_utils
 
         x = hub_utils.from_pretrained(
             model_name_or_path,
@@ -112,7 +112,7 @@ class mGENRE(BARTModel):
         layernorm_embedding=True,
         **kwargs,
     ):
-        from fairseq import hub_utils
+        from fairseq.fairseq import hub_utils
 
         x = hub_utils.from_pretrained(
             model_name_or_path,

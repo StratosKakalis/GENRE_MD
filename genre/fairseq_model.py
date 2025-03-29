@@ -9,7 +9,7 @@ import os
 from typing import List, Dict
 
 import torch
-from fairseq.fairseq.fairseq.models.bart import BARTHubInterface, BARTModel
+from fairseq.fairseq.models.bart import BARTHubInterface, BARTModel
 
 from genre.utils import post_process_wikidata
 
